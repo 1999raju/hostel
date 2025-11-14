@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenHarvest — Organic Farming</title>
+  <meta name="description" content="GreenHarvest — Organic farming products, services and community" />
+  <style>
+    :root{--accent:#2f8f3b;--accent-2:#73b06b;--muted:#6b7280;--bg:#f6fbf6;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#0f172a; line-height:1.5}
+    header{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:white; padding:36px 20px}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;letter-spacing:0.3px}
+    nav a{color:white;text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:48px 0}
+    .hero h1{font-size:34px;margin:0 0 12px}
+    .hero p{color:rgba(255,255,255,0.95);margin:0 0 20px}
+    .cta{display:inline-block;background:white;color:var(--accent);padding:12px 18px;border-radius:8px;font-weight:700;text-decoration:none}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.06)}
+
+    /* features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:40px 0}
+    .feature h3{margin:8px 0 6px}
+    .muted{color:var(--muted)}
+
+    /* gallery, services */
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gallery img{width:100%;height:100px;object-fit:cover;border-radius:8px}
+
+    /* contact */
+    form{display:grid;gap:10px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6e9ee;font-size:14px}
+    button{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:0;font-weight:700}
+
+    footer{padding:28px 0;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .row{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      .features{grid-template-columns:1fr}
+      .gallery img{height:90px}
+      header{padding:20px 12px}
+      .hero{padding:24px 0}
+      .hero h1{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">🌱 <span style="font-weight:800">Green</span>Harvest</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#shop">Shop</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="container hero">
+      <div>
+        <h1>Organic farming made simple — sustainable, healthy, profitable</h1>
+        <p>From soil health tips and seasonal planting guides to selling your fresh produce — GreenHarvest offers tools and services to grow and sell organically.</p>
+        <p style="margin-top:18px">
+          <a class="cta" href="#contact">Get a free consultation</a>
+        </p>
+        <div style="margin-top:22px;display:flex;gap:12px;color:rgba(255,255,255,0.95)">
+          <div class="card" style="background:rgba(255,255,255,0.08);padding:12px;border-radius:10px;color:white">Expert Agronomist Support</div>
+          <div class="card" style="background:rgba(255,255,255,0.08);padding:12px;border-radius:10px;color:white">Soil Test Kits</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0">Start your organic farm</h3>
+        <p class="muted">Tell us where you are and what you grow — we'll suggest a personalised plan.</p>
+        <form id="leadForm">
+          <input type="text" name="name" placeholder="Full name" required />
+          <input type="text" name="location" placeholder="City / Village" required />
+          <select name="interest">
+            <option value="vegetables">Vegetables</option>
+            <option value="fruits">Fruits</option>
+            <option value="grains">Grains</option>
+            <option value="mixed">Mixed</option>
+          </select>
+          <button type="submit">Request plan</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:28px 0">
+    <section id="about" class="card" style="margin-bottom:20px">
+      <h2>About GreenHarvest</h2>
+      <p class="muted">GreenHarvest helps small and medium farmers switch to organic practices with easy plans, market access and training. We focus on soil health, natural pest control and profitable crop choices.</p>
+    </section>
+
+    <section id="services" style="margin-bottom:28px">
+      <h2>Our Services</h2>
+      <div class="features">
+        <div class="card feature">
+          <strong>Soil Testing</strong>
+          <h3>Accurate soil reports</h3>
+          <p class="muted">Actionable recommendations for compost, pH correction and organic fertilisers.</p>
+        </div>
+        <div class="card feature">
+          <strong>Training & Workshops</strong>
+          <h3>Practical farm training</h3>
+          <p class="muted">On-field workshops on composting, crop rotation and water conservation.</p>
+        </div>
+        <div class="card feature">
+          <strong>Market Linkage</strong>
+          <h3>Sell directly to buyers</h3>
+          <p class="muted">Connect to local organic shops and consumers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="card" style="margin-bottom:28px">
+      <h2>Featured Products</h2>
+      <div class="row">
+        <div>
+          <h3>Soil Test Kit</h3>
+          <p class="muted">Easy home kit to check pH and nutrient levels.</p>
+        </div>
+        <div>
+          <h3>Organic Compost Bag</h3>
+          <p class="muted">Ready-to-use compost made from local green waste.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:8px">Gallery</h3>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=60" alt="farm field">
+        <img src="https://images.unsplash.com/photo-1501004318645-2a3d6b2a1f44?auto=format&fit=crop&w=800&q=60" alt="compost">
+        <img src="https://images.unsplash.com/photo-1501004318649-3d4a7d2f3b88?auto=format&fit=crop&w=800&q=60" alt="vegetables">
+      </div>
+    </section>
+
+    <section id="tips" style="margin-bottom:28px">
+      <div class="card">
+        <h2>Quick Tips</h2>
+        <ul class="muted">
+          <li>Rotate crops yearly to keep soil healthy.</li>
+          <li>Use organic mulch to retain moisture and suppress weeds.</li>
+          <li>Encourage beneficial insects instead of using pesticides.</li>
+          <li>Test soil before adding fertiliser.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact & Support</h2>
+      <div class="row">
+        <div>
+          <p class="muted">Need help with a farm plan or market access? Send us a message.</p>
+          <div style="margin-top:12px">
+            <strong>Phone:</strong> +91 98765 43210<br>
+            <strong>Email:</strong> support@greenharvest.example
+          </div>
+        </div>
+        <div>
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" rows="4" placeholder="Tell us about your farm" required></textarea>
+            <button type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div>© <strong>GreenHarvest</strong> 2025 — All rights reserved</div>
+      <div class="muted">Built with ❤️ for small farmers</div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple demo handlers — in real project replace with API calls
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thanks '+ (this.name.value || '') +" — we'll email your plan soon.");
+      this.reset();
+    });
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Message sent — thanks!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
