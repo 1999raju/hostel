@@ -1,10 +1,9 @@
-from flask import Flask
+import time
 
-app = Flask(__name__)
+print("Simple Python app started...")
 
-@app.route("/")
-def home():
-    return "Hello, this is a simple Python app!"
+for i in range(1, 6):
+    print(f"Processing step {i}...")
+    time.sleep(1)
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+print("Python app finished successfully!")
